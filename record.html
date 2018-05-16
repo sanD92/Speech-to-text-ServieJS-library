@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Live input record and playback</title>
+        <style type='text/css'>
+            ul {
+                list-style: none;
+            }
+
+            #recordingslist audio {
+                display: block;
+                margin-bottom: 10px;
+            }
+            .mydiv {
+                top: 50%;
+                left: 50%;
+                width:30em;
+                height:18em;
+                margin-top: -9em; /*set to a negative number 1/2 of your height*/
+                margin-left: -15em; /*set to a negative number 1/2 of your width*/
+                border: 1px solid #ccc;
+                background-color: #f3f3f3;
+                position:fixed;
+            }
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+<body>
+   <!--  <h1>Recorder.js export example</h1>
+
+    <p>Make sure you are using a recent version of Google Chrome.</p>
+    <p>Also before you enable microphone input either plug in headphones or turn the volume down if you want to avoid ear splitting
+        feedback!
+    </p> -->
+    <div class="container">
+        <br><br><br>
+        <div class="row">
+                <div class="col col-lg-12 col-md-12 col-sm-12 text-center">
+                        <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                  <h3 class="panel-title">Record Audio</h3>
+                                </div>
+                                <div class="panel-body">
+                                        <button id="start-btn" class="btn btn-default">Start recording</button>
+                                        <button id="stop-btn"  class="btn btn-default">Stop recording</button>
+                                        
+                                            <div class="row">
+                                                   <!-- <div class="page-header text-left">
+                                                            <h3>List of files</h3>
+                                                    </div>-->
+                                                <div class="col col-lg-3 col-md-3 col-sm-12">
+                                                        <ul id="recordingslist">                                                            
+                                                        </ul>
+                                                </div>
+                                            </div>
+                                        
+                                </div>
+                        </div>
+                </div>
+               
+        </div>    
+         <!-- List item to store the recording files so they can be played in the browser -->
+         <div class="row">
+            <div class="col col-lg-12 col-md-12 col-sm-12 text-center">
+                    <div class="panel panel-primary">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">Speech to Text Service</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p id="stt"></p>
+                            </div>
+                    </div>
+            </div>
+           
+    </div>       
+
+    </div>
+    <!-- Draw the action buttons -->
+    
+  
+
+   
+
+    <!-- Include the recorder.js library from a local copy -->
+    <script src="audio.js"></script>
+    <script src="recorder.js"></script>
+</body>
+</html>
